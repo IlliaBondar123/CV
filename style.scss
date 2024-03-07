@@ -1,0 +1,126 @@
+html {
+    scroll-behavior: smooth;
+  }
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+body {
+    box-sizing: border-box;
+    background-image: url(./img/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    max-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    .links {
+        display: flex;
+        max-height: 565px;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 125px;
+        gap: 50px;
+        background-color: thistle;
+        padding: 100px;
+        img {
+            max-width: 300px;
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul {
+            max-height: 215px;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid transparent;
+                border-radius: 10px;
+                padding: 5px;
+                text-decoration: none;
+                color: black;
+                svg {
+                    max-width: 50px;
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    .link.active, .links ul a:hover  {
+        transition: all 0.25s ease-out;
+        fill: green;
+        border: 2px solid green ;
+        color: green;
+      }
+      .bio {
+        max-width: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+        section {
+           height: 100vh;
+           display:flex;
+           justify-content: center;
+           align-items: center;
+            .text {
+                background-color: teal;
+                padding: 100px;
+            }
+        }
+      }
+}
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    nav {
+        display: flex;
+    }
+}
+@media (max-width:1200px) {
+    .about {
+        flex-direction: column;
+        .links {
+            flex-direction: row;
+            align-items: center;
+            background-color: #fff;
+            padding: 0 10px;
+            height: 100px;
+            top: 0;
+            gap: unset;
+            justify-content: space-around;
+            ul {
+                gap: unset;
+                max-width: 300px;
+                width: 100%;
+                justify-content: space-between;
+            }
+            img {
+                max-width: 100px;
+            }
+        }
+        .bio {
+            max-width: unset;
+        }
+    }
+}
+@media (max-width:400px) {
+    .photo {
+        display: none;
+    }
+}
