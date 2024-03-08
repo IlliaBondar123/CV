@@ -1,13 +1,15 @@
 html {
     scroll-behavior: smooth;
   }
+  * {
+    box-sizing: border-box;
+  }
 .container {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
 }
 body {
-    box-sizing: border-box;
     background-image: url(./img/bg.png);
     background-size: cover;
     background-attachment: fixed;
@@ -18,14 +20,16 @@ body {
         display: flex;
         max-height: 565px;
         height: 100%;
+        margin: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: sticky;
-        top: 125px;
+        top: 175px;
         gap: 50px;
         background-color: thistle;
         padding: 100px;
+        z-index: 99;
         img {
             max-width: 300px;
             width: 100%;
@@ -79,7 +83,142 @@ body {
            align-items: center;
             .text {
                 background-color: teal;
-                padding: 100px;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                margin: 10px;
+                    a {
+                        text-decoration: none;
+                    }
+                .positioning {
+                    position: relative;
+                    &:hover {
+                        .underline, .bhromaon, .monticello {
+                            display: flex;
+                        }
+                        .preview {
+                            transition: all 0.25s;
+                            filter: blur(4px);
+                            scale: 1.05;
+                        }
+                    }
+                }
+                .underline {
+                    position: absolute;
+                    left: 59px;
+                    top: 90px;
+                    display: none;
+                }
+                .bhromaon {
+                    position: absolute;
+                    left: 65px;
+                    top: 22px;
+                    display: none;
+                }
+                .monticello {
+                    position: absolute;
+                    left: 65px;
+                    top: 12px;
+                    display: none;
+                }
+                .preview {
+                    max-width: 200px;
+                    width: 100%;
+                    max-height: 200px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .socials {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    li {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .facebook {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        background-color: #fff;
+                        border: 3px groove black;
+                        border-radius: 10px;
+                        &::before {
+                            content: url(./img/facebook.png);
+                        }
+                    }
+                    .instagram {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        background-color: #fff;
+                        border: 3px groove black;
+                        border-radius: 10px;
+                        &::before {
+                            content: url(./img/instagram.png);
+                        }
+                    }
+                    .linkedin {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        background-color: #fff;
+                        border: 3px groove black;
+                        border-radius: 10px;
+                        &::before {
+                            content: url(./img/linkedin.png);
+                        }
+                    }
+                    .telegram {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        background-color: #fff;
+                        border: 3px groove black;
+                        border-radius: 10px;
+                        &::before {
+                            content: url(./img/telegram.png);
+                        }
+                    }
+                    .facebook:hover, .linkedin:hover, .instagram:hover, .telegram:hover {
+                        transition: all 0.25s;
+                        scale: 1.05;
+                        border-color: green;
+                        background-color: bisque;
+                    }
+                }
+            }
+            .education {
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+                gap: 5px;
+                span {
+                    a {
+                        text-decoration: none;
+                    }
+                }
+                .university::before {
+                    content: url(./img/university.png);
+                    padding-right: 5px;
+                }
+                .course::before {
+                    content: url(./img/open-book.png);
+                    padding-right: 5px;
+                }
+                .profile::before {
+                    content: url(./img/user.png);
+                    padding-right: 5px;
+                }
             }
         }
       }
